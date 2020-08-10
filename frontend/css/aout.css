@@ -1,0 +1,269 @@
+/************************************ Communs ******************************************/
+
+body {
+    background-image: url("../imgs/photo_projet.png");
+    width: 100%;
+}
+
+.boutons {
+    margin-left: 33%;
+}
+
+.imgTop {
+       width: 35%;
+       margin-top: 2%;
+       margin-left: 34%;
+       margin-bottom: 5%;
+   }
+
+/************************************ Accueuil ******************************************/
+
+.boutonAccueil {
+    width: 55%;
+    height: 80px;
+    margin-bottom: 10px;
+    border: 0;
+    font-family: fantasy;
+    color: orangered;
+    font-size: 300%;
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+
+/************************************ Connexion *************************************/
+
+#inputUser {
+    width: 55%;
+    height: 80px;
+    margin-bottom: 10px;
+    border: 0;
+    font-family: fantasy;
+    font-size: 300%;
+    background-color: darkgrey;
+    border-radius: 10px;
+    text-align: center;
+    color: lightpink;
+}
+
+#inputPassword {
+    width: 55%;
+    height: 80px;
+    margin-bottom: 10px;
+    border: 0;
+    font-family: fantasy;
+    font-size: 300%;
+    background-color: darkgrey;
+    border-radius: 10px;
+    text-align: center;
+    color: lightpink;
+}
+
+#inputValider {
+    width: 20%;
+    height: 60px;
+    border: 0;
+    font-size: 220%;
+    background-color: #5DEA69;
+    border-radius: 40px;
+    color: black;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 17.5%;
+}
+
+/*********************************** Managment ******************************************/
+
+.imgTop2 {
+    width: 12%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+#titre {
+    width: 43.5%;
+    font-size: 1000%;
+    margin-left: 29%;
+    margin-bottom: 4%;
+    font-weight: bold;
+    padding: 0.7%;
+    margin-top: 0;
+    border-bottom: red solid 8px;
+}
+
+.managmentBoutons {
+    width: 20%;
+    height: 80px;
+    margin-bottom: 1%;
+    margin-left: 41.5%;
+    border: 0;
+    font-family: fantasy;
+    font-size: 300%;
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+
+#managmentBouton1 {
+    background-color: dodgerblue;
+}
+
+#managmentBouton2 {
+    background-color: orangered;
+}
+
+#managmentBouton3 {
+    background-color: lightskyblue;
+}
+
+#addDeviceBouton {
+    width: 12%;
+    height: 5%;
+    margin-top: 3%;
+    margin-right: 2%;
+    float: right;
+    border: 0;
+    font-family: fantasy;
+    font-size: 200%;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+
+#deleteDeviceBouton{
+    width: 12%;
+    height: 5%;
+    margin-top: 3%;
+    margin-right: 2%;
+    float: right;
+    border: 0;
+    font-family: fantasy;
+    font-size: 200%;
+    background-color: indianred;
+    border-radius: 10px;
+}
+
+/*********************************** Add Devices *************************************/
+
+#addDevice {
+    margin-left: 35%;
+}
+
+#formAddDevice {
+    margin-left: 12%;
+}
+
+#titreAddDevice {
+    font-size: 500%;
+    border-bottom: solid black 3px;
+    width: 48%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+
+#labelAdd {
+    font-size: 300%;
+    font-family:corbel,sans-serif;
+    margin-left: 4%;
+}
+
+#labelAdd1 {
+    font-size: 300%;
+    font-family:corbel,sans-serif;
+    margin-right: 6.5%;
+    margin-left: 4%;
+}
+
+#labelAdd2 {
+    font-size: 300%;
+    font-family:corbel,sans-serif;
+    margin-right: 7%;
+    margin-left: 4%;
+}
+
+
+.inputAdd {
+    margin-top: 20px;
+    width: 4%;
+    height: 25px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#idAddDevice {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 30%;
+    font-size: 200%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+}
+
+#confirmAdd {
+    margin-left: 11%;
+    font-size: 200%;
+    border-radius: 5px;
+    border: 0;
+    background-color: #5DEA69;
+    padding: 0.5%;
+}
+
+.backBouton {
+    font-size: 200%;
+    background-color: red;
+    padding: 0.5%;
+    float: right;
+    margin-right: 5%;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 2.5%;
+}
+
+/***************************************** Delete Device ********************************************/
+
+#deleteDevice {
+    margin-left: 35%;
+}
+
+#formDeleteDevice {
+    margin-left: 6.5%;
+}
+
+#titreDeleteDevice {
+    width: 41%;
+    font-size: 500%;
+    border-bottom: solid black 3px;
+    margin-bottom: 5%;
+    margin-top: 15%;
+}
+
+#idDeleteDevice {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 200%;
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+}
+
+#boutonDelete {
+    margin-left: 11%;
+    margin-top: 3%;
+    font-size: 200%;
+    border-radius: 5px;
+    border: 0;
+    background-color: #5DEA69;
+    padding: 0.5%;
+}
+
+#confirmDelete {
+    margin-left: 10.2%;
+    margin-top: 1%;
+    font-size: 200%;
+    border-radius: 5px;
+    border: 0;
+    background-color: red;
+    padding: 0.5%;
+}
+

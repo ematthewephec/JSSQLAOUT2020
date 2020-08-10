@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/aout.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Where is My device?</title>
+    <script src="js/aout.js" type="text/javascript"></script>
+</head>
+<body>
+<main id="accueil">
+    <div class="logo">
+        <img class="imgTop" src="imgs/logo_aout.png" alt="logos">
+    </div>
+
+    <div class="boutons">
+        <button class="boutonAccueil" onclick="goToConnexion() ">Connexion</button>
+    </div>
+</main>
+
+<main id="connexion" hidden>
+    <div class="logo">
+        <img class="imgTop" src="imgs/logo_aout.png" alt="logos" onclick="location.reload()">
+    </div>
+
+    <div class="boutons">
+    <form name="mon-formulaire1" onsubmit="return goToManagment()">
+        <input id="inputUser" type="text" name="user" placeholder="Enter Your User">
+        <input id="inputPassword" type="password" name="password" placeholder="Enter Your Password"><br>
+        <input id="inputValider" type="submit" value="Valider">
+    </form>
+    </div>
+
+</main>
+
+<main id="managment" hidden>
+
+    <div class="logo">
+        <img class="imgTop2" src="imgs/logo_aout.png" alt="logos">
+        <button id="addDeviceBouton" onclick="goToAddDevice()">Add Device</button>
+        <button id="deleteDeviceBouton" onclick="goToDeleteDevice()">Delete Device</button>
+    </div>
+
+    <p id="titre">Managment</p>
+
+    <div>
+        <button id="managmentBouton1" class="managmentBoutons">Users</button><br>
+        <button id="managmentBouton2" class="managmentBoutons">Devices</button><br>
+        <button id="managmentBouton3" class="managmentBoutons">Types</button>
+    </div>
+</main>
+
+<main id="deleteDevice" hidden>
+        <button class="backBouton" onclick="goToManagment()">Back</button>
+        <p id="titreDeleteDevice">Delete a Device</p>
+
+        <form id="formDeleteDevice" onsubmit="return false">
+            <input id="idDeleteDevice" type="text" placeholder="Enter Device's ID"><br>
+            <input id="boutonDelete" type="button" onclick="askConfirmation()" value="Delete"><br>
+            <input id="confirmDelete" type="submit" hidden value="Confirm">
+        </form>
+</main>
+<main id="addDevice" hidden>
+    <button class="backBouton" onclick="goToManagment()">Back</button>
+    <p id="titreAddDevice">Add a new Device</p>
+
+        <form id="formAddDevice" onsubmit="return false">
+            <label id="labelAdd1">Phone</label>
+            <input class="inputAdd" type="radio" name="categ" checked><br>
+            <label id="labelAdd">Computer</label>
+            <input class="inputAdd" type="radio" name="categ"><br>
+            <label id="labelAdd2">Tablet</label>
+            <input class="inputAdd" type="radio" name="categ"><br>
+            <input id="idAddDevice" type="text" placeholder="Enter Device's ID"><br>
+            <input id="confirmAdd" type="submit">
+        </form>
+</main>
+</body>
+</html>
