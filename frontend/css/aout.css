@@ -23,9 +23,9 @@ body {
     height: 80px;
     margin-bottom: 10px;
     border: 0;
-    font-family: fantasy;
+    font-family: auto;
     color: orangered;
-    font-size: 300%;
+    font-size: 2.8vw;
     background-color: darkgrey;
     border-radius: 10px;
 }
@@ -37,7 +37,7 @@ body {
     height: 80px;
     margin-bottom: 10px;
     border: 0;
-    font-family: fantasy;
+    font-family: auto;
     font-size: 300%;
     background-color: darkgrey;
     border-radius: 10px;
@@ -50,7 +50,7 @@ body {
     height: 80px;
     margin-bottom: 10px;
     border: 0;
-    font-family: fantasy;
+    font-family: auto;
     font-size: 300%;
     background-color: darkgrey;
     border-radius: 10px;
@@ -81,7 +81,7 @@ body {
 
 #titre {
     width: 43.5%;
-    font-size: 1000%;
+    font-size: 8.5vw;
     margin-left: 29%;
     margin-bottom: 4%;
     font-weight: bold;
@@ -96,8 +96,8 @@ body {
     margin-bottom: 1%;
     margin-left: 41.5%;
     border: 0;
-    font-family: fantasy;
-    font-size: 300%;
+    font-family: auto;
+    font-size: 3vw;
     background-color: darkgrey;
     border-radius: 10px;
 }
@@ -121,8 +121,8 @@ body {
     margin-right: 2%;
     float: right;
     border: 0;
-    font-family: fantasy;
-    font-size: 200%;
+    font-family: auto;
+    font-size: 1.1vw;
     background-color: lightgreen;
     border-radius: 10px;
 }
@@ -134,8 +134,8 @@ body {
     margin-right: 2%;
     float: right;
     border: 0;
-    font-family: fantasy;
-    font-size: 200%;
+    font-family: auto;
+    font-size: 1vw;
     background-color: indianred;
     border-radius: 10px;
 }
@@ -151,7 +151,7 @@ body {
 }
 
 #titreAddDevice {
-    font-size: 500%;
+    font-size: 4.1vw;
     border-bottom: solid black 3px;
     width: 48%;
     margin-top: 15%;
@@ -159,20 +159,20 @@ body {
 }
 
 #labelAdd {
-    font-size: 300%;
+    font-size: 2.5vw;
     font-family:corbel,sans-serif;
     margin-left: 4%;
 }
 
 #labelAdd1 {
-    font-size: 300%;
+    font-size: 2.5vw;
     font-family:corbel,sans-serif;
     margin-right: 6.5%;
     margin-left: 4%;
 }
 
 #labelAdd2 {
-    font-size: 300%;
+    font-size: 2.5vw;
     font-family:corbel,sans-serif;
     margin-right: 7%;
     margin-left: 4%;
@@ -191,7 +191,7 @@ body {
     margin-top: 1%;
     margin-bottom: 1%;
     width: 30%;
-    font-size: 200%;
+    font-size: 2vw;
     height: 50px;
     border-radius: 10px;
     border: 0;
@@ -199,8 +199,8 @@ body {
 }
 
 #confirmAdd {
-    margin-left: 11%;
-    font-size: 200%;
+    margin-left: 10%;
+    font-size: 1.5vw;
     border-radius: 5px;
     border: 0;
     background-color: #5DEA69;
@@ -208,14 +208,13 @@ body {
 }
 
 .backBouton {
-    font-size: 200%;
+    font-size: 1.5vw;
     background-color: red;
     padding: 0.5%;
     float: right;
     margin-right: 5%;
     border: 0;
     border-radius: 5px;
-    margin-top: 2.5%;
 }
 
 /***************************************** Delete Device ********************************************/
@@ -230,7 +229,7 @@ body {
 
 #titreDeleteDevice {
     width: 41%;
-    font-size: 500%;
+    font-size: 4.1vw;
     border-bottom: solid black 3px;
     margin-bottom: 5%;
     margin-top: 15%;
@@ -239,7 +238,7 @@ body {
 #idDeleteDevice {
     margin-top: 1%;
     margin-bottom: 1%;
-    font-size: 200%;
+    font-size: 2vw;
     width: 30%;
     height: 50px;
     border-radius: 10px;
@@ -248,9 +247,9 @@ body {
 }
 
 #boutonDelete {
-    margin-left: 11%;
+    margin-left: 10%;
     margin-top: 3%;
-    font-size: 200%;
+    font-size: 1.8vw;
     border-radius: 5px;
     border: 0;
     background-color: #5DEA69;
@@ -258,12 +257,141 @@ body {
 }
 
 #confirmDelete {
-    margin-left: 10.2%;
+    margin-left: 10%;
     margin-top: 1%;
-    font-size: 200%;
+    font-size: 1.5vw;
     border-radius: 5px;
     border: 0;
     background-color: red;
     padding: 0.5%;
 }
 
+/************************************ Users ***************************************/
+
+#titreUsers {
+    font-size: 3.8vw;
+    margin-top: 8%;
+    margin-left: 41%;
+    border-bottom: red 5px solid;
+    width: 20%;
+}
+
+#usersDiv {
+    font-size: 2vw;
+    margin-left: 45%;
+    height: 280px;
+    overflow-y: scroll;
+    width: 14.5%;
+}
+
+#usersDiv button{
+     font-size: 2vw;
+    margin-bottom: 4%;
+    border-radius: 10px;
+    border: black solid 2px;
+ }
+
+#usersTable {
+    margin-left: 20%;
+    font-size: 1vw;
+    text-align: center;
+    width: 64%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#usersTable thead tr th {
+    font-size: 1.5vw;
+}
+
+#usersTable thead tr th, #usersBody tr td {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/****************************************** Devices *******************************************/
+
+#titreDevices {
+    font-size: 4vw;
+    margin-top: 8%;
+    margin-left: 35%;
+    border-bottom: red 5px solid;
+    width: 32%;
+}
+
+#devicesDiv {
+    margin-left: 38%;
+}
+
+#idRecherche {
+    font-size: 2vw;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    border: black solid;
+}
+
+#boutonRecherche {
+    font-size: 1.5vw;
+    margin-left: 15%;
+    background-color: #5DEA69;
+    border-radius: 5px;
+    border: 0;
+}
+
+#resultatRecherche {
+    margin-left: 32.5%;
+    font-size: 1.5vw;
+}
+
+/**************************************** Types ******************************************/
+
+#titreTypes {
+    font-size: 4vw;
+    margin-top: 8%;
+    margin-left: 36%;
+    border-bottom: red 5px solid;
+    width: 26.9%;
+}
+
+#devicesTypes table {
+    background-color: white;
+    font-size: 1.5vw;
+    width: 50%;
+    margin-left: 24%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#devicesTypes tbody{
+    display: block;
+    height: 202px;
+    overflow-y: auto;
+}
+
+#devicesTypes table thead tr th {
+    font-size: 2vw;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+#devicesTypes table tbody tr td {
+    width: 10%;
+}
+
+#devicesTypes table thead tr th, #devicesTypes table tbody tr td {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#formTypes {
+    background-color: #5DEA69;
+    float: right;
+    margin-right: 10%;
+    font-size: 2vw;
+    border-radius: 10px;
+}
+
+#formTypes input {
+    width: 25px;
+    height: 25px;
+}

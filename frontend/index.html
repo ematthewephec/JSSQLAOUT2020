@@ -43,9 +43,9 @@
     <p id="titre">Managment</p>
 
     <div>
-        <button id="managmentBouton1" class="managmentBoutons">Users</button><br>
-        <button id="managmentBouton2" class="managmentBoutons">Devices</button><br>
-        <button id="managmentBouton3" class="managmentBoutons">Types</button>
+        <button id="managmentBouton1" class="managmentBoutons" onclick="goToUsers()">Users</button><br>
+        <button id="managmentBouton2" class="managmentBoutons" onclick="goToDevices()">Devices</button><br>
+        <button id="managmentBouton3" class="managmentBoutons" onclick="goToTypes()">Types</button>
     </div>
 </main>
 
@@ -59,6 +59,7 @@
             <input id="confirmDelete" type="submit" hidden value="Confirm">
         </form>
 </main>
+
 <main id="addDevice" hidden>
     <button class="backBouton" onclick="goToManagment()">Back</button>
     <p id="titreAddDevice">Add a new Device</p>
@@ -73,6 +74,168 @@
             <input id="idAddDevice" type="text" placeholder="Enter Device's ID"><br>
             <input id="confirmAdd" type="submit">
         </form>
+</main>
+
+<main id="users" hidden>
+    <button class="backBouton" onclick="goToManagment()">Back</button>
+    <h1 id="titreUsers">Users's List</h1>
+
+    <div id="usersDiv">
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+    </div>
+
+    <div id="divAffichageUser">
+        <table id="usersTable">
+            <thead>
+                <tr>
+                    <th colspan="1">Utilisateur</th>
+                    <th>Produit</th>
+                    <th>Id du produit</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tfoot>
+
+            </tfoot>
+            <tbody id="usersBody">
+                <tr>
+                    <td>Matthew Everard</td>
+                    <td>Iphone 9</td>
+                    <td>3</td>
+                    <td>Téléphone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>apple watch</td>
+                    <td>6</td>
+                    <td>Téléphone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>galaxyTab</td>
+                    <td>3</td>
+                    <td>tablette</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Iphone 9</td>
+                    <td>3</td>
+                    <td>Téléphone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Iphone 9</td>
+                    <td>3</td>
+                    <td>Téléphone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Iphone 9</td>
+                    <td>3</td>
+                    <td>Téléphone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Iphone 9</td>
+                    <td>3</td>
+                    <td>Téléphone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Iphone 9</td>
+                    <td>3</td>
+                    <td>Téléphone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Iphone 9</td>
+                    <td>3</td>
+                    <td>Téléphone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Iphone 9</td>
+                    <td>3</td>
+                    <td>Téléphone</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<main id="devices" hidden>
+    <button class="backBouton" onclick="goToManagment()">Back</button>
+    <h1 id="titreDevices">Shearch a Devices</h1>
+
+    <div id="devicesDiv">
+        <form onsubmit="return afficherResultat()">
+            <input id="idRecherche" type="text" placeholder="device's ID ..."><br>
+            <input id="boutonRecherche" type="submit" value="Shearch">
+        </form>
+    </div>
+
+    <div id="resultatRecherche" hidden>
+        <p>L'appareil 9 est un téléphone emprunté par Matthew Everard .</p>
+    </div>
+</main>
+
+<main id="types" hidden>
+    <button class="backBouton" onclick="goToManagment()">Back</button>
+    <h1 id="titreTypes">Devices's Types</h1>
+
+    <div id="devicesTypes">
+        <form id="formTypes">
+            <input type="radio" name="type" onclick="afficherTablets()" checked>
+            <label>Tablets</label><br>
+            <input type="radio" name="type" onclick="afficherComputers()">
+            <label>Computers</label><br>
+            <input type="radio" name="type" onclick="afficherPhones()">
+            <label>Phones</label>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th id="titreTableTypes">Tablets</th>
+                </tr>
+            </thead>
+            <tfoot>
+
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>galaxyTab : 12</td>
+                </tr>
+                <tr>
+                    <td>galaxyTab : 1</td>
+                </tr>
+                <tr>
+                    <td>galaxyTab : 55</td>
+                </tr>
+                <tr>
+                    <td>galaxyTab : 6</td>
+                </tr>
+                <tr>
+                    <td>galaxyTab : 4</td>
+                </tr>
+                <tr>
+                    <td>galaxyTab : 3</td>
+                </tr>
+                <tr>
+                    <td>galaxyTab</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </main>
 </body>
 </html>
