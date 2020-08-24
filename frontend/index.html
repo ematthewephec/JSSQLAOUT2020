@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <link href="css/aout.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
@@ -20,10 +20,11 @@
 <main id="connexion" hidden>
     <div class="logo">
         <img class="imgTop" src="imgs/logo_aout.png" alt="logos" onclick="location.reload()">
+        <p id="messageErreure" hidden>Mot de passe ou User incorrect !</p>
     </div>
 
     <div class="boutons">
-    <form name="mon-formulaire1" onsubmit="return goToManagment()">
+    <form name="mon-formulaire1" onsubmit="return connexion()">
         <input id="inputUser" type="text" name="user" placeholder="Enter Your User">
         <input id="inputPassword" type="password" name="password" placeholder="Enter Your Password"><br>
         <input id="inputValider" type="submit" value="Valider">
@@ -38,25 +39,58 @@
         <img class="imgTop2" src="imgs/logo_aout.png" alt="logos">
         <button id="addDeviceBouton" onclick="goToAddDevice()">Add Device</button>
         <button id="deleteDeviceBouton" onclick="goToDeleteDevice()">Delete Device</button>
+        <button id="addAssignationBouton" onclick="goToAddAssignation()">Add Assignation</button>
+        <button id="deleteAssignationBouton" onclick="goToDeleteAssignation()">Delete Assignation</button>
     </div>
 
     <p id="titre">Managment</p>
 
     <div>
-        <button id="managmentBouton1" class="managmentBoutons" onclick="goToUsers()">Users</button><br>
+        <button id="managmentBouton1" class="managmentBoutons" onclick="usersList()">Users</button><br>
         <button id="managmentBouton2" class="managmentBoutons" onclick="goToDevices()">Devices</button><br>
         <button id="managmentBouton3" class="managmentBoutons" onclick="goToTypes()">Types</button>
     </div>
 </main>
 
+<main id="deleteAssignation" hidden>
+    <button class="backBouton" onclick="goToManagment()">Back</button>
+    <p id="titreDeleteAssignation">Delete a Assignation</p>
+    <p id="delAssRefus" hidden>L'id n'est pas assigné ou n'existe pas.</p>
+    <p id="delAssAccepted" hidden>L'assignation a bien été suprimée.</p>
+
+    <form id="formDeleteAssi" onsubmit="return confirmDeleteAssig()">
+        <input id="deviceIdDeleteAssi" type="number" min="0" placeholder="Enter Device Id..."><br>
+        <input id="validerDeleteAssi" type="button" value="Valider" onclick="askDeleteAssi()"><br>
+        <input id="confirmDeleteAssi" type="submit" value="Confirm" hidden>
+    </form>
+</main>
+
+<main id="addAssignation" hidden>
+    <button class="backBouton" onclick="goToManagment()">Back</button>
+    <p id="titreAddAssignation">Add a Assignation</p>
+    <p id="addAssRefus" hidden>L'id du user ou du device n'existe pas</p>
+    <p id="addAssAccepted" hidden>L'assignation a bien été ajoutée.</p>
+
+    <form id="formAddAssi" onsubmit="return addAssignation()">
+        <input id="userIdAddAssi" type="number" min="0" placeholder="Enter User Id..."><br>
+        <input id="deviceIdAddAssi" type="number" min="0" placeholder="Enter Device Id..."><br>
+        <input id="validerAddAssi" type="button" value="Valider" onclick="verifUser()"><br>
+        <input id="confirmAddAssi" type="submit" value="Confirm" hidden>
+    </form>
+
+</main>
+
 <main id="deleteDevice" hidden>
         <button class="backBouton" onclick="goToManagment()">Back</button>
         <p id="titreDeleteDevice">Delete a Device</p>
+        <p id="messageRefus" hidden>L'id entré n'est pas valide.</p>
+        <p id="messageAccepter" hidden>L'appareil a bien été supprimé.</p>
 
-        <form id="formDeleteDevice" onsubmit="return false">
-            <input id="idDeleteDevice" type="text" placeholder="Enter Device's ID"><br>
+
+    <form id="formDeleteDevice" onsubmit="return confirmerSupp()">
+            <input id="idDeleteDevice" type="number" min="0" placeholder="Enter Device's ID"><br>
             <input id="boutonDelete" type="button" onclick="askConfirmation()" value="Delete"><br>
-            <input id="confirmDelete" type="submit" hidden value="Confirm">
+            <input id="confirmDelete" type="submit" value="Confirm" hidden>
         </form>
 </main>
 
@@ -64,16 +98,17 @@
     <button class="backBouton" onclick="goToManagment()">Back</button>
     <p id="titreAddDevice">Add a new Device</p>
 
-        <form id="formAddDevice" onsubmit="return false">
+        <form id="formAddDevice" onsubmit="return addDevice()">
             <label id="labelAdd1">Phone</label>
-            <input class="inputAdd" type="radio" name="categ" checked><br>
+            <input class="inputAdd" type="radio" name="categ" checked value="P"><br>
             <label id="labelAdd">Computer</label>
-            <input class="inputAdd" type="radio" name="categ"><br>
+            <input class="inputAdd" type="radio" name="categ" value="C"><br>
             <label id="labelAdd2">Tablet</label>
-            <input class="inputAdd" type="radio" name="categ"><br>
-            <input id="idAddDevice" type="text" placeholder="Enter Device's ID"><br>
+            <input class="inputAdd" type="radio" name="categ" value="T"><br>
+            <input id="nameAddDevice" type="text" placeholder="Enter Device's Name"><br>
             <input id="confirmAdd" type="submit">
         </form>
+    <p id="messageAjouter" hidden>L'appareil a bien été ajouté.</p>
 </main>
 
 <main id="users" hidden>
@@ -81,16 +116,7 @@
     <h1 id="titreUsers">Users's List</h1>
 
     <div id="usersDiv">
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
-        <button onclick="afficherDevicesUser()">Matthew : 34</button><br>
+
     </div>
 
     <div id="divAffichageUser">
@@ -107,66 +133,7 @@
 
             </tfoot>
             <tbody id="usersBody">
-                <tr>
-                    <td>Matthew Everard</td>
-                    <td>Iphone 9</td>
-                    <td>3</td>
-                    <td>Téléphone</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>apple watch</td>
-                    <td>6</td>
-                    <td>Téléphone</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>galaxyTab</td>
-                    <td>3</td>
-                    <td>tablette</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Iphone 9</td>
-                    <td>3</td>
-                    <td>Téléphone</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Iphone 9</td>
-                    <td>3</td>
-                    <td>Téléphone</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Iphone 9</td>
-                    <td>3</td>
-                    <td>Téléphone</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Iphone 9</td>
-                    <td>3</td>
-                    <td>Téléphone</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Iphone 9</td>
-                    <td>3</td>
-                    <td>Téléphone</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Iphone 9</td>
-                    <td>3</td>
-                    <td>Téléphone</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Iphone 9</td>
-                    <td>3</td>
-                    <td>Téléphone</td>
-                </tr>
+
             </tbody>
         </table>
     </div>
@@ -177,14 +144,14 @@
     <h1 id="titreDevices">Shearch a Devices</h1>
 
     <div id="devicesDiv">
-        <form onsubmit="return afficherResultat()">
+        <form onsubmit="return searchDevice()">
             <input id="idRecherche" type="text" placeholder="device's ID ..."><br>
             <input id="boutonRecherche" type="submit" value="Shearch">
         </form>
     </div>
 
     <div id="resultatRecherche" hidden>
-        <p>L'appareil 9 est un téléphone emprunté par Matthew Everard .</p>
+
     </div>
 </main>
 
@@ -194,11 +161,11 @@
 
     <div id="devicesTypes">
         <form id="formTypes">
-            <input type="radio" name="type" onclick="afficherTablets()" checked>
+            <input id="check" type="radio" name="type" onclick="afficherTablets('T')" checked>
             <label>Tablets</label><br>
-            <input type="radio" name="type" onclick="afficherComputers()">
+            <input type="radio" name="type" onclick="afficherComputers('C')">
             <label>Computers</label><br>
-            <input type="radio" name="type" onclick="afficherPhones()">
+            <input type="radio" name="type" onclick="afficherPhones('P')">
             <label>Phones</label>
         </form>
         <table>
@@ -210,32 +177,11 @@
             <tfoot>
 
             </tfoot>
-            <tbody>
-                <tr>
-                    <td>galaxyTab : 12</td>
-                </tr>
-                <tr>
-                    <td>galaxyTab : 1</td>
-                </tr>
-                <tr>
-                    <td>galaxyTab : 55</td>
-                </tr>
-                <tr>
-                    <td>galaxyTab : 6</td>
-                </tr>
-                <tr>
-                    <td>galaxyTab : 4</td>
-                </tr>
-                <tr>
-                    <td>galaxyTab : 3</td>
-                </tr>
-                <tr>
-                    <td>galaxyTab</td>
-                </tr>
+            <tbody id="tbodyType">
+
             </tbody>
         </table>
     </div>
-
 </main>
 </body>
 </html>

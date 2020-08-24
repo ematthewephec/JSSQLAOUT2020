@@ -13,7 +13,7 @@ body {
        width: 35%;
        margin-top: 2%;
        margin-left: 34%;
-       margin-bottom: 5%;
+       margin-bottom: 2%;
    }
 
 /************************************ Accueuil ******************************************/
@@ -69,6 +69,12 @@ body {
     text-align: center;
     margin-top: 2%;
     margin-left: 17.5%;
+}
+
+#messageErreure {
+    color: red;
+    font-size: 1.5vw;
+    margin-left: 42%;
 }
 
 /*********************************** Managment ******************************************/
@@ -140,6 +146,156 @@ body {
     border-radius: 10px;
 }
 
+#deleteAssignationBouton{
+    width: 12%;
+    height: 5%;
+    margin-top: 3%;
+    margin-right: 2%;
+    float: right;
+    border: 0;
+    font-family: auto;
+    font-size: 1vw;
+    background-color: indianred;
+    border-radius: 10px;
+}
+
+#addAssignationBouton {
+    width: 12%;
+    height: 5%;
+    margin-top: 3%;
+    margin-right: 2%;
+    float: right;
+    border: 0;
+    font-family: auto;
+    font-size: 1vw;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+/****************************** Delete Assignation ***********************************/
+
+#formDeleteAssi {
+    margin-left: 40%;
+}
+
+#titreDeleteAssignation {
+    font-size: 4.1vw;
+    border-bottom: solid black 3px;
+    width: 35%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 33%;
+}
+
+#deviceIdDeleteAssi {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2vw;
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+}
+
+#validerDeleteAssi {
+    margin-left: 10%;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    border: 0;
+    background-color: #5DEA69;
+    padding: 0.5%;
+}
+
+#confirmDeleteAssi {
+    font-size: 1.5vw;
+    background-color: red;
+    padding: 0.5%;
+    margin-top: 1%;
+    margin-left: 9.4%;
+    border: 0;
+    border-radius: 5px;
+}
+
+#delAssRefus {
+    color: red;
+    font-size: 1.5vw;
+    margin-left: 38%;
+}
+
+#delAssAccepted {
+    color: green;
+    font-size: 1.5vw;
+    margin-left: 39%;
+}
+
+/******************************** Add Assignation *************************************/
+
+#formAddAssi {
+    margin-left: 40%;
+}
+
+#titreAddAssignation {
+    font-size: 4.1vw;
+    border-bottom: solid black 3px;
+    width: 32%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 35%;
+}
+
+#userIdAddAssi {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2vw;
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+}
+
+#deviceIdAddAssi {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2vw;
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+}
+
+#validerAddAssi {
+    margin-left: 10%;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    border: 0;
+    background-color: #5DEA69;
+    padding: 0.5%;
+}
+
+#confirmAddAssi {
+    font-size: 1.5vw;
+    background-color: red;
+    padding: 0.5%;
+    margin-top: 1%;
+    margin-left: 9.4%;
+    border: 0;
+    border-radius: 5px;
+}
+
+#addAssRefus {
+    color: red;
+    font-size: 1.5vw;
+    margin-left: 38%;
+}
+
+#addAssAccepted {
+    color: green;
+    font-size: 1.5vw;
+    margin-left: 39%;
+}
+
 /*********************************** Add Devices *************************************/
 
 #addDevice {
@@ -187,11 +343,11 @@ body {
     margin-right: 0;
 }
 
-#idAddDevice {
+#nameAddDevice {
     margin-top: 1%;
     margin-bottom: 1%;
     width: 30%;
-    font-size: 2vw;
+    font-size: 1.5vw;
     height: 50px;
     border-radius: 10px;
     border: 0;
@@ -215,6 +371,12 @@ body {
     margin-right: 5%;
     border: 0;
     border-radius: 5px;
+}
+
+#messageAjouter {
+    color: green;
+    font-size: 1.5vw;
+    margin-left: 12%;
 }
 
 /***************************************** Delete Device ********************************************/
@@ -266,6 +428,18 @@ body {
     padding: 0.5%;
 }
 
+#messageRefus {
+    color: red;
+    font-size: 2vw;
+    margin-left: 5%;
+}
+
+#messageAccepter {
+    color: green;
+    font-size: 2vw;
+    margin-left: 1%;
+}
+
 /************************************ Users ***************************************/
 
 #titreUsers {
@@ -278,17 +452,18 @@ body {
 
 #usersDiv {
     font-size: 2vw;
-    margin-left: 45%;
+    margin-left: 40%;
     height: 280px;
     overflow-y: scroll;
-    width: 14.5%;
+    width: 21%;
 }
 
 #usersDiv button{
-     font-size: 2vw;
+    font-size: 1.5vw;
     margin-bottom: 4%;
     border-radius: 10px;
     border: black solid 2px;
+    width: 95%;
  }
 
 #usersTable {
@@ -339,7 +514,7 @@ body {
 }
 
 #resultatRecherche {
-    margin-left: 32.5%;
+    margin-left: 34.5%;
     font-size: 1.5vw;
 }
 
