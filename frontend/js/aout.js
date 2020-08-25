@@ -1,4 +1,6 @@
 "use strict";
+// Everard Matthew
+// HE201678
 
 /********************************* Fonctions Utiles ******************************/
 
@@ -47,7 +49,7 @@ function goToManagment() {
     getElemId("deviceIdAddAssi").value = "";
     getElemId("userIdAddAssi").value = "";
     getElemId("addAssAccepted").hidden = true;
-
+    getElemId("addAssRefus").hidden = true;
     return false
 }
 
@@ -277,7 +279,7 @@ function afficherPhones(param) {
 /********************************* Delete Device *****************************************/
 
 function askConfirmation() {
-    debugger;
+   // debugger;
     let deviceASupp = getElemId("idDeleteDevice").value;
 
     let xhr = new XMLHttpRequest();
@@ -301,7 +303,6 @@ function askConfirmation() {
 }
 
 function confirmerSupp() {
-    debugger;
     let deviceASupp = getElemId("idDeleteDevice").value;
 
     let xhr = new XMLHttpRequest();
